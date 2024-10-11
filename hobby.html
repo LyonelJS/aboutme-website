@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contentHobby{ /**content in hobby page**/
+    background-color:lightgray; /**give the background color**/
+    margin-left:50px;
+    margin-right:50px; /**margin of div**/
+    padding:50px;   /**padding**/
+    display:flex;
+    text-align:center; /**center the text**/
+    justify-content: center;
+    border:5px solid black; /**border**/
+    border-radius:10px;
+}
+
+
+.games{ /**first content**/
+    position:relative;
+    justify-content:center;
+}
+.container{ /**to display image**/
+    width:850px; /**set the height and width**/
+    height:350px;
+    overflow:hidden;
+    position:relative;
+    border-color:black;
+    border-radius:10px;
+}
+.container img{ /**the images that will be displayed**/
+    width:100%;
+    height:auto;
+    position:absolute;
+    display:none;
+    top:0;
+    left:0;
+}
+#game1{ /**display the default image**/
+    display:block;
+}
+.container img:target { /**display it to the container div**/
+display: block; 
+}
+
+
+.slider{ /**slider to choose which image to display**/
+    display:flex;
+    font-size:xx-large;
+    justify-content:center;
+}
+.slider a{ /**the link in the slider**/
+    text-decoration:none;
+}
+.slider a:hover{ /**slider decoration**/
+    color:darkslategray;
+}
+
+
+.slider a:active{ /**slider decoration**/
+color: gray;
+}
+
+.caption{ /**caption of the hobby**/
+    display: flex; 
+    position: absolute; 
+    bottom: 100px; /** Position slightly above the bottom **/
+    left: 50%;
+    transform: translateX(-50%); /** Center it horizontally **/
+    background-color: white; 
+    color: black; 
+    padding: 10px;
+    border-radius: 10px;
+}
+.container:hover{ /**enlarge the photo that is selected**/
+    width:1000px;
+    height:450px;
+}
+.game:hover .caption{ /**blur the caption when hovering over the image**/
+    opacity:.3;
+    bottom:100px;
+}
+
+
+.contentHobby2{ /**second hobby**/
+    background-color:lightgray; /**background color**/
+    margin-left:50px;
+    margin-right:50px; /**margin**/
+    padding:50px; /**padding**/
+    display:flex;
+    text-align:center; /**center the text**/
+    justify-content:center;
+    border:5px solid black; /**border**/
+    border-radius:10px;
+}
+.badminton{ /**format for the badminton content**/
+    justify-content:center;
+    position:relative;
+}
+.containers2{ /**div that will be used to display the image**/
+    width:850px;
+    height:450px; /**width and height setting**/
+    overflow:hidden;
+    position:relative;
+    border-color:black;
+    border-radius:10px;
+}
+.containers2 img{ /**image size setting**/
+    width:100%; /**make sure it fills the div**/
+    height:auto;
+    position:absolute;
+    display:none;
+    top:0;
+    left:0;
+}
+#badmin1{ /**default image**/
+    display:block;
+}
+.containers2 img:target { /**display the image selected**/
+display: block; 
+}
+
+
+.slider2{ /**to select the image for the second content**/
+    display:flex;
+    font-size:xx-large;
+    justify-content:center;
+}
+.slider2 a{ /**link in the slider decoration**/
+    text-decoration:none;
+}
+.slider2 a:hover{ /**slider decoration**/
+    color:darkslategray;
+}
+
+
+.slider2 a:active{ /**slider decoration**/
+color: gray;
+}
+
+.caption2{
+    display: flex;
+    position: absolute; 
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%); /** Center it horizontally **/
+    background-color: white; /** set background color**/
+    color: black; /**Text color**/
+    padding: 10px;
+    border-radius: 10px; /**round corners**/
+} 
+.containers2:hover{ /**selected image enlargement**/
+    width:1000px;
+    height:550px;
+}
+.badminton:hover .caption2{ /**caption blur and less visible**/
+    opacity:.3;
+    bottom:100px;
+}
+
+@media(max-width:450px){ /**adjust for small screen**/
+    .contentHobby, .contentHobby2{ /**adjust the margin and padding so that it fits better**/
+    margin-left:10px;
+    margin-right:10px;
+    padding:10px;
+}
+.game, .badminton{ /**adjust the size of the div**/
+    width:80%;
+    height:60%;
+}
+.container, .containers2{ /**adjust the size of the image that will be displayed**/
+    width:100%; 
+    min-height: 150px;
+    max-height:150px;
+  }
+
+  .container:hover, .containers2:hover{ /**adjust the size of the image when hovered**/
+    width: 120%;
+  }
+.caption{ /**makes the font smaller for the caption and adjusts the position**/
+    font-size:x-small;
+    bottom:59%;
+}
+.caption2{ /**adjust size and position of caption**/
+    font-size:x-small;
+    bottom:40%;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="supercontainer"> <!--navbar-->
+            <div class="home"><a href="index.html"><img src="home.png" alt="home" width="80px" height="70px" style="border-radius:50px"></a></div> <!--home-->
+            <div class="container1">
+                <a href="AboutMe.html" class="link"><h1>About Me</h1></a> <!--aboutme page-->
+            </div>
+            <div class="container2">
+                <a href="hobby.html" class="link"><h1>Interests</h1></a> <!--interests page-->
+            </div>
+            <div class="container3">
+                <a href="education.html" class="link"><h1>Education</h1></a> <!--Education page-->
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    
+    <div class="dropdown" id="dropdown">
+        <div class="menu1">
+            <a href="AboutMe.html" class="link"><h2>About Me</h2></a> <!--aboutme page-->
+        </div>
+        <div class="menu2">
+            <a href="hobby.html" class="link"><h2>Interests</h2></a> <!--interests page-->
+        </div>
+        <div class="menu3">
+            <a href="education.html" class="link"><h2>Education</h2></a> <!--Education page-->
+        </div>
+    </div>
+
+    <h1 class="header">My Interests</h1> <!--header-->
+    <div class="contentHobby"> <!--content 1 in interests page-->
+        <div class="game"> <!--content games-->
+            <div class="container"> <!--games images-->
+                <img id="game1" src="mole1.PNG" alt="Game 1">
+                <img id="game2" src="mole2.PNG" alt="Game 2">
+                <img id="game3" src="mole3.PNG" alt="Game 3">
+            </div>
+            <nav class="slider"> <!--slider to select images-->
+                <a href="#game1"><h1>.</h1></a>
+                <a href="#game2"><h1>.</h1></a>
+                <a href="#game3"><h1>.</h1></a>
+            </nav>
+            <div class="caption">
+                <h1>Playing Games</h1> <!--caption-->
+            </div>
+        </div>
+    </div>
+    <div class="contentHobby2"> <!--content 2 in interests page-->
+        <div class="badminton"> <!--content badminton-->
+            <div class="containers2"> <!--badminton images-->
+                <img id="badmin1" src="badmin1.jpg" alt="Game 1">
+                <img id="badmin2" src="badmin2.jpg" alt="Game 2">
+                <img id="badmin3" src="badmin3.jpeg" alt="Game 3">
+            </div>
+            <nav class="slider2"> <!--slider to select images-->
+                <a href="#badmin1"><h1>.</h1></a>
+                <a href="#badmin2"><h1>.</h1></a>
+                <a href="#badmin3"><h1>.</h1></a>
+            </nav>
+            <div class="caption2"> <!--caption-->
+                <h1>BADMINTON</h1>
+            </div>
+        </div>
+    </div>
+    <div class="contacts"> <!--my contacts-->
+        <div class="whatsapp">
+            <a href="https://wa.me/087771523150"><img src="whatsapp.png" alt="whatsapp">+627771523150</a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/lyoneljudson/"><img src="instagram.webp" alt="instagram">@lyoneljudson</a>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+
+</body>
+</html>
